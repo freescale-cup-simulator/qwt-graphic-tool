@@ -1,0 +1,145 @@
+#include <qapplication.h>
+#include <qlayout.h>
+#include <qwt_plot.h>
+#include <qwt_plot_marker.h>
+#include <qwt_plot_curve.h>
+#include <qwt_legend.h>
+#include <qwt_point_data.h>
+#include <qwt_plot_canvas.h>
+#include <qwt_plot_panner.h>
+#include <qwt_plot_magnifier.h>
+#include <qwt_text.h>
+#include <qwt_symbol.h>
+#include <qwt_math.h>
+#include <math.h>
+
+
+
+class Plot : public QwtPlot
+{
+public:
+    Plot( QWidget *parent = NULL );
+
+protected:
+    virtual void resizeEvent( QResizeEvent * );
+
+private:
+    void populate();
+    void updateGradient();
+};
+
+
+Plot::Plot( QWidget *parent ):
+    QwtPlot( parent )
+{
+    setAutoFillBackground( true );
+    setPalette( QPalette( QColor( 165, 193, 228 ) ) );
+    updateGradient();
+
+    setTitle( "A Simple QwtPlot Demonstration" );
+    insertLegend( new QwtLegend(), QwtPlot::RightLegend );
+
+    // axes
+    setAxisTitle( xBottom, "x -->" );
+    setAxisScale( xBottom, 0.0, 10.0 );
+
+    setAxisTitle( yLeft, "y -->" );
+    setAxisScale( yLeft, -1.0, 1.0 );
+
+    // canvas
+    QwtPlotCanvas *canvas = new QwtPlotCanvas();
+    canvas->setLineWidth( 1 );
+    canvas->setFrameStyle( QFrame::Box | QFrame::Plain );
+    canvas->setBorderRadius( 15 );
+
+    QPalette canvasPalette( Qt::white );
+    canvasPalette.setColor( QPalette::Foreground, QColor( 133, 190, 232 ) );
+    canvas->setPalette( canvasPalette );
+
+    setCanvas( canvas );
+
+    // panning with the left mouse button
+    ( void ) new QwtPlotPanner( canvas );
+
+    // zoom in/out with the wheel
+    ( void ) new QwtPlotMagnifier( canvas );
+
+    populate();
+}
+
+void Plot::populate()
+{
+    // Insert new curves
+    QwtPlotCurve *cSin = new QwtPlotCurve( "y = sin(x)" );
+    cSin->setRenderHint( QwtPlotItem::RenderAntialiased );
+    cSin->setLegendAttribute( QwtPlotCurve::LegendShowLine, true );
+    cSin->setPen( Qt::red );
+    cSin->attach( this );
+
+
+    // Create sin and cos data
+    Logger l;
+    l.setFileName("simple_algorithm.dat");
+    DataSet d;
+
+    l.beginRead();
+
+    QVector<double> count;
+    QVector<double> v;
+    int i = 0;
+
+    while (l.canRead()) {
+        l>>d;
+        v.insert(i,d.current_wheel_angle);
+        qDebug()<<v.at(i);
+
+        count.insert(i,i);
+        i++;
+    }
+    l.endRead();
+
+    logFunCurve->setSamples(count, v);
+}
+
+void Plot::updateGradient()
+{
+    QPalette pal = palette();
+
+    const QColor buttonColor = pal.color( QPalette::Button );
+
+    QLinearGradient gradient( rect().topLeft(), rect().bottomLeft() );
+    gradient.setColorAt( 0.0, Qt::white );
+    gradient.setColorAt( 0.7, buttonColor );
+    gradient.setColorAt( 1.0, buttonColor );
+
+    pal.setBrush( QPalette::Window, gradient );
+    setPalette( pal );
+}
+
+void Plot::resizeEvent( QResizeEvent *event )
+{
+    QwtPlot::resizeEvent( event );
+
+    updateGradient();
+}
+
+int main( int argc, char **argv )
+{
+    QApplication a( argc, argv );
+
+    Plot *plot = new Plot();
+
+    // We put a dummy widget around to have
+    // so that Qt paints a widget background
+    // when resizing
+
+    QWidget window;
+    QHBoxLayout *layout = new QHBoxLayout( &window );
+    layout->setContentsMargins( 0, 0, 0, 0 );
+    layout->addWidget( plot );
+
+    window.resize( 600, 400 );
+    window.show();
+
+    return a.exec();
+}

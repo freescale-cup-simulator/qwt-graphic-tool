@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="qwt-graphic-tool" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\usr\;CMake Files\..\..\..\usr\lib64\;CMake Files\..\..\..\usr\lib64\cmake\;CMake Files\..\..\..\usr\lib64\cmake\Qt5Widgets\;CMake Files\..\..\..\usr\lib64\cmake\Qt5Gui\;CMake Files\..\..\..\usr\lib64\cmake\Qt5Core\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/afterthegame/qwtHabra/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="qwt-graphic-tool">
+         <Option output="/home/afterthegame/qwtHabra/build/qwt-graphic-tool" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/afterthegame/qwtHabra/build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DQT_WIDGETS_LIB" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add directory="/home/afterthegame/qwtHabra" />
+            <Add directory="/home/afterthegame/qwtHabra/build" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/qt" />
+            <Add directory="/usr/include/qt/QtCore" />
+            <Add directory="/usr/include/qt/QtGui" />
+            <Add directory="/usr/include/qt/QtWidgets" />
+            <Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/4.8.2/../../../../include/c++/4.8.2" />
+            <Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/4.8.2/../../../../include/c++/4.8.2/backward" />
+            <Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/4.8.2/../../../../include/c++/4.8.2/x86_64-unknown-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/4.8.2/include" />
+            <Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/4.8.2/include-fixed" />
+            <Add directory="/usr/lib/qt/mkspecs/linux-g++" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/qwt-6.1.0/include" />
+            <Add directory="/usr/local/qwt-6.1.0/lib/libqwt.so" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 qwt-graphic-tool" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="qwt-graphic-tool/fast">
+         <Option output="/home/afterthegame/qwtHabra/build/qwt-graphic-tool" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/afterthegame/qwtHabra/build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DQT_WIDGETS_LIB" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add directory="/home/afterthegame/qwtHabra" />
+            <Add directory="/home/afterthegame/qwtHabra/build" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/qt" />
+            <Add directory="/usr/include/qt/QtCore" />
+            <Add directory="/usr/include/qt/QtGui" />
+            <Add directory="/usr/include/qt/QtWidgets" />
+            <Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/4.8.2/../../../../include/c++/4.8.2" />
+            <Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/4.8.2/../../../../include/c++/4.8.2/backward" />
+            <Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/4.8.2/../../../../include/c++/4.8.2/x86_64-unknown-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/4.8.2/include" />
+            <Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/4.8.2/include-fixed" />
+            <Add directory="/usr/lib/qt/mkspecs/linux-g++" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/qwt-6.1.0/include" />
+            <Add directory="/usr/local/qwt-6.1.0/lib/libqwt.so" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 qwt-graphic-tool/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="qwt-graphic-tool_automoc">
+         <Option working_dir="/home/afterthegame/qwtHabra/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 qwt-graphic-tool_automoc" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/afterthegame/qwtHabra/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/afterthegame/qwtHabra/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/afterthegame/qwtHabra/logger.cc">
+      </Unit>
+      <Unit filename="/home/afterthegame/qwtHabra/main.cpp">
+      </Unit>
+      <Unit filename="/home/afterthegame/qwtHabra/widget.cpp">
+      </Unit>
+      <Unit filename="/home/afterthegame/qwtHabra/common.h">
+      </Unit>
+      <Unit filename="/home/afterthegame/qwtHabra/logger.h">
+      </Unit>
+      <Unit filename="/home/afterthegame/qwtHabra/widget.h">
+      </Unit>
+      <Unit filename="/home/afterthegame/qwtHabra/widget.ui">
+      </Unit>
+      <Unit filename="/home/afterthegame/qwtHabra/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/afterthegame/qwtHabra/../../../usr/lib64/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib64\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/afterthegame/qwtHabra/../../../usr/lib64/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib64\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/afterthegame/qwtHabra/../../../usr/lib64/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib64\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/afterthegame/qwtHabra/../../../usr/lib64/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib64\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/afterthegame/qwtHabra/../../../usr/lib64/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib64\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/afterthegame/qwtHabra/../../../usr/lib64/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib64\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/afterthegame/qwtHabra/../../../usr/lib64/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib64\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/afterthegame/qwtHabra/../../../usr/lib64/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib64\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/afterthegame/qwtHabra/../../../usr/lib64/cmake/Qt5Core/Qt5CoreConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib64\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/afterthegame/qwtHabra/../../../usr/lib64/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib64\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/afterthegame/qwtHabra/../../../usr/lib64/cmake/Qt5Core/Qt5CoreMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib64\cmake\Qt5Core\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>
